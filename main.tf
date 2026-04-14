@@ -36,7 +36,7 @@ resource "terraform_data" "cluster_destroy" {
   provisioner "remote-exec" {
     when = destroy
     inline = [
-      "eksctl delete cluster -f /home/ec2-user/eksctl/eks.yaml --wait"
+      "eksctl delete cluster -f /home/ec2-user/k8-eksctl/eksctl.yaml --wait"
     ]
     connection {
       type     = "ssh"
